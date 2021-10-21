@@ -28,10 +28,10 @@ const deleteAnimal = (idAnimal) => {
     const sqlDeleteControlSalud = `DELETE FROM controlganadero.controlsalud WHERE idAnimal = ?;`;
 
     return new Promise((resolve, reject) => {
-        conector.query(sqlDeleteInseminacion, [idAnimal])
-        conector.query(sqlDeleteControlSalud, [idAnimal])
-        conector.query(sqlDeleteNatalidad, [idAnimal])
-        conector.query(sqlDeleteAnimal, (error, result) => {
+        conector.query(sqlDeleteInseminacion, [+idAnimal])
+        conector.query(sqlDeleteControlSalud, [+idAnimal])
+        conector.query(sqlDeleteNatalidad, [+idAnimal])
+        conector.query(sqlDeleteAnimal, [+idAnimal], (error, result) => {
 
             if (error) reject(error)
             else resolve(result.affectedRows)

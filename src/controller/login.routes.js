@@ -3,7 +3,7 @@ const svcLogin = require('../services/login.svc.js')
 const routes = express.Router()
 const jwt = require('jsonwebtoken')
 
-routes.get('/usuarios', verifyToken, (req, res) => {
+routes.get('/usuarios', (req, res) => {
     svcLogin.searchUsers().then(result => {
         res.json(result)
     }).catch(error => {
