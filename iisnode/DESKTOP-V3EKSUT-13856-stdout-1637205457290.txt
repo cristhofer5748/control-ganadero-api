@@ -1,0 +1,2 @@
+Server running on port  \\.\pipe\7586e42c-c6e0-40a5-8685-5d2cec39601e
+Conectado a controlGanadero

@@ -4,7 +4,7 @@ const varios = require('../services/variosData.svc')
 
 routes.put('/animal', (req, res) => {
     let animal = req.body;
-
+    console.log('Entro al metodo')
     varios.updateAnimal(animal).then(result => {
         res.json(result)
     }).catch(error => {

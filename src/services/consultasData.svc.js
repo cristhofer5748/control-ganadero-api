@@ -182,6 +182,8 @@ function searchPaises() {
     })
 }
 
+
+
 function formatDate(date) {
     let formatted_date = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + (date.getDate())
 

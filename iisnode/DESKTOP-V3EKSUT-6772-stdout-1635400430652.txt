@@ -1,0 +1,74 @@
+Server running on port  \\.\pipe\82299dad-084b-4d52-bd67-b6f1e07b5fb8
+Conectado a controlGanadero
+Entro al metodo
+Entro a la query
+[
+  RowDataPacket {
+    idUsuario: 1,
+    idPais: 578,
+    idGanadero: 1,
+    correo: 'cristhofer5047@gmail.com',
+    'contraseña': '1234',
+    numeroTelefono: 31660678,
+    tieneFinca: 1,
+    nombreFinca: 'La esperanza',
+    nombre: 'Cristhofer',
+    apellido: 'Rodriguez',
+    fechaNacimiento: 1998-08-12T06:00:00.000Z,
+    sexo: 'M'
+  }
+]
+Entro al metodo
+Entro a la query
+[
+  RowDataPacket {
+    idUsuario: 1,
+    idPais: 578,
+    idGanadero: 1,
+    correo: 'cristhofer5047@gmail.com',
+    'contraseña': '1234',
+    numeroTelefono: 31660678,
+    tieneFinca: 1,
+    nombreFinca: 'La esperanza',
+    nombre: 'Cristhofer',
+    apellido: 'Rodriguez',
+    fechaNacimiento: 1998-08-12T06:00:00.000Z,
+    sexo: 'M'
+  }
+]
+Entro al metodo
+Entro a la query
+[
+  RowDataPacket {
+    idUsuario: 1,
+    idPais: 578,
+    idGanadero: 1,
+    correo: 'cristhofer5047@gmail.com',
+    'contraseña': '1234',
+    numeroTelefono: 31660678,
+    tieneFinca: 1,
+    nombreFinca: 'La esperanza',
+    nombre: 'Cristhofer',
+    apellido: 'Rodriguez',
+    fechaNacimiento: 1998-08-12T06:00:00.000Z,
+    sexo: 'M'
+  }
+]
+Entro al metodo
+Entro a la query
+[
+  RowDataPacket {
+    idUsuario: 1,
+    idPais: 578,
+    idGanadero: 1,
+    correo: 'cristhofer5047@gmail.com',
+    'contraseña': '1234',
+    numeroTelefono: 31660678,
+    tieneFinca: 1,
+    nombreFinca: 'La esperanza',
+    nombre: 'Cristhofer',
+    apellido: 'Rodriguez',
+    fechaNacimiento: 1998-08-12T06:00:00.000Z,
+    sexo: 'M'
+  }
+]

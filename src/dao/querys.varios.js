@@ -5,20 +5,24 @@ const { conector } = require("../settings/mysql.conector.js");
 
 
 const updateAnimal = (animal) => {
-
+    console.log('Entro a la query de actualizar')
     const queryUpdateAnimal = `UPDATE controlganadero.registroanimal
     SET  pesoAnimal= ?, numPadre= ?, numMadre= ?, fotoAnimal= ?, numAnimal= ?, nombreAnimal= ?, 
           fechaNacimiento= ?, origen= ?, razaAnimal= ?, enproduccion= ?, etapaVida= ? WHERE idAnimal= ?;`;
-    return new Promise((resolve, reject) => {
-        conector.query(queryUpdateAnimal, [animal.pesoAnimal, animal.numPadre, animal.numMadre,
-            animal.fotoAnimal, animal.numAnimal, animal.nombreAnimal, animal.fechaNacimiento,
-            animal.origen, animal.razaAnimal, animal.enproduccion, animal.etapaVida, animal.idAnimal
-        ], (error, result) => {
-
-            if (error) reject(error)
-            else resolve(result.message)
+    try {
+        return new Promise((resolve, reject) => {
+            conector.query(queryUpdateAnimal, [animal.pesoAnimal, animal.numPadre, animal.numMadre,
+                animal.fotoAnimal, animal.numAnimal, animal.nombreAnimal, animal.fechaNacimiento,
+                animal.origen, animal.razaAnimal, animal.enproduccion, animal.etapaVida, animal.idAnimal
+            ], (error, result) => {
+                if (error) reject(error)
+                else resolve(result.message)
+            })
         })
-    })
+    } catch (error) {
+        console.log('Informacion del error ', error)
+    }
+
 }
 
 const deleteAnimal = (idAnimal) => {

@@ -4,18 +4,22 @@ const routes = express.Router()
 
 routes.post('/animal', (req, res) => {
     let animal = req.body;
-    console.log(animal)
-    insertData.insertAnimal(animal).then(function(result) {
-        res.json(result)
-    }).catch(error => {
-        console.log(error);
-        res.json(error);
-    })
+
+    try {
+        insertData.insertAnimal(animal).then(function(result) {
+            res.json(result)
+        }).catch(error => {
+            console.log(error);
+            res.json(error);
+        })
+    } catch (error) {
+        console.log(error)
+    }
+
 })
 
 routes.post('/user', (req, res) => {
     let user = req.body;
-
     insertData.insertUser(user).then(result => {
         res.json(result)
     }).catch(error => {

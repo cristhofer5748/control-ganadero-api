@@ -3,13 +3,13 @@ const app = express()
 var log4js = require("log4js");
 const bodyParser = require('body-parser');
 const cors = require('cors')
-const routslogin = require('./controller/login.routes')
-const routsInsert = require('./controller/InsertController.js')
-const routsConsultas = require('./controller/consultasController.js')
-const routsVarios = require('./controller/varios.Controller.js')
-const conection = require('./settings/mysql.conector.js')
+const routslogin = require('./src/controller/login.routes')
+const routsInsert = require('./src/controller/InsertController.js')
+const routsConsultas = require('./src/controller/consultasController.js')
+const routsVarios = require('./src/controller/varios.Controller.js')
+const conection = require('./src/settings/mysql.conector.js')
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8016);
 
 log4js.configure({
     appenders: {
@@ -25,7 +25,7 @@ log4js.configure({
     }
 });
 
-app.use(express.json({ limit: '50mb' }));
+app.use(express.json({ limit: '500mb' }));
 app.use(express.urlencoded({ extended: false }));
 app.use(cors())
 

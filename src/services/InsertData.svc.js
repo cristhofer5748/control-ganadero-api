@@ -31,7 +31,7 @@ function insertUser(objectUser) {
     return new Promise(async(resolve, reject) => {
         var mr;
         var result = await query.registerUser(objectUser);
-        console.log
+
         try {
             if (result) {
                 mr = { state: 200, data: [{ info: "Usuario creado", idUsuario: result }], message: "SUCCES" };
@@ -99,7 +99,7 @@ function insertNatality(objectNatality) {
 
 function insertInsemination(objectInsemination) {
     return new Promise(async(resolve, reject) => {
-        console.log("Entro al segunda funcion")
+
         var mr;
         var result = await query.registerInsemination(objectInsemination);
 

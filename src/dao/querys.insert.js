@@ -4,12 +4,17 @@ const { conector } = require("../settings/mysql.conector.js");
 const registerAnimal = (animal) => {
 
     const sqlInsertAnimalRegister = `INSERT INTO controlganadero.registroanimal SET ?`;
-    return new Promise((resolve, reject) => {
-        conector.query(sqlInsertAnimalRegister, animal, (erro, resul) => {
-            if (erro) reject(erro)
-            else resolve(resul.insertId)
-        });
-    })
+    try {
+        return new Promise((resolve, reject) => {
+            conector.query(sqlInsertAnimalRegister, animal, (erro, resul) => {
+                if (erro) reject(erro)
+                else resolve(resul.insertId)
+            });
+        })
+    } catch (error) {
+        console.log("Error de conexion ", error)
+    }
+
 };
 
 const registerUser = (user) => {
